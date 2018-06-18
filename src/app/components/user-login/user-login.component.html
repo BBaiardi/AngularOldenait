@@ -1,0 +1,45 @@
+<div class="login-wrapper" *ngIf="!(auth.user | async); else alreadyLoggedIn">
+  <form class="login">
+    <label class="title">
+      <h3 class="welcome">Bienvenido a</h3>
+      Oldenait
+      <h5 class="hint">Ingresa tu usuario o crea uno ahora</h5>
+    </label>
+    <div class="login-group">
+      <div class="auth-source select">
+        <select id="login-auth-source-1">
+          <option>Usuario</option>
+          <option>Administrador</option>
+        </select>
+      </div>
+      <input class="username" type="text" id="login-username" placeholder="Usuario">
+      <input class="password" type="password" id="login-password" placeholder="Password">
+      <div class="checkbox">
+        <input type="checkbox" id="rememberme">
+        <label for="rememberme">
+          Recordarme
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Continuar</button>
+      <a href="#" class="signUp">Crear usuario</a>
+
+  <button (click)="signInWithFacebook()">
+      <i class="fab fa-facebook"></i> Facebook
+    </button>
+  
+    <button (click)="signInWithGoogle()">
+      <i class="fab fa-google"></i> Google
+    </button>
+    </div>
+  </form>
+
+
+</div>
+
+<ng-template #alreadyLoggedIn>
+  <p>
+    Ya estás logueado!
+  </p>
+</ng-template>
+
+
