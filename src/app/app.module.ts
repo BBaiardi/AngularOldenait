@@ -12,7 +12,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 import { EventComponent } from './components/event/event.component';
 import { EventService } from './services/event.service';
@@ -27,6 +27,7 @@ import { EventDetailComponent } from './components/event-detail/event-detail.com
 import { HomePageComponent } from './ui/home-page/home-page.component';
 import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
