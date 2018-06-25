@@ -1,12 +1,6 @@
-<ngb-carousel>
-  <ng-template ngbSlide *ngFor="let event of events">
-    <img [src]="event.imageUrl">
-  </ng-template>
-</ngb-carousel>
-
 <div class="row">
-  <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-    <div class="card clickeable" *ngFor="let event of events">
+  <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12"  *ngFor="let event of events">
+    <div class="card clickeable">
       <div class="card-header">
         <h1>{{ event.title }}</h1>
       </div>
@@ -14,9 +8,19 @@
         <img [src]="event.imageUrl">
       </div>
       <div class="card-footer">
+        <button type="button" class="btn btn-icon"><clr-icon shape="heart" size="36"></clr-icon></button>
+        <button type="button" class="btn btn-icon"><clr-icon shape="share" size="36"></clr-icon></button>
         
-        <clr-icon shape="heart" size="36"></clr-icon>
-        <clr-icon shape="share" size="36"></clr-icon>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="clr-row">
+  <div class="clr-col-6" *ngFor="let event of events">
+    <div class="card">
+      <div class="card-img">
+        <img [src]="event.imageUrl">
       </div>
     </div>
   </div>
